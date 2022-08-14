@@ -1,1 +1,182 @@
-a
+body{
+    background-color: #404c4c;
+    margin: 0;
+}
+.container{
+    display: flex; 
+    height: 100%;
+}
+.coins{
+    width: 22%; 
+    display: grid;
+    grid-template-rows: 110px 507px;
+    border-right: 5px solid rgb(71, 18, 18);
+}
+.head__coins{
+    display: flex;
+    background-image: url("../img/head.jpeg");
+    height: 110px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.head__coins-tit{
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.head__coins-stats{
+    background-image: url("../img/fondostats.jpg");
+    background-attachment: fixed;
+    width: 100%;
+}
+.coins__stats{
+    padding-top: 19px;
+    background-color: #404c4c8c;
+    align-items: center;
+    text-align: center;
+    height: 488px;
+}
+.coins__stats .stats{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.coins__stats .p-stats{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+.enemys{
+    width: 60%;
+    height: 76%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #404c4c;
+    z-index: 200;
+}
+.bg-white{
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 25px;
+}
+.bg{
+    background-color: #404c4c;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    margin-left: -25px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+.head__enemy{
+    height: 110px;
+    width: 100%;
+    background-image: url("../img/enemy.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(17, 10, 43);
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.enemy{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 50px 420px;
+    grid-template-columns: 50px max-content;
+}
+.enemy__hearth{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 50px;
+    height: 50px;
+}
+.enemy__bars-bg{
+    /* grid-row: 2/3; */
+    width: 490px;
+    height: 50px;
+    clip-path: polygon(0 25%, 96% 25%, 96% 48%, 96% 76%, 0 76%);  
+    background-color: rgb(0, 0, 0);
+    z-index: 50;
+}
+.enemy__bars-life{
+    /* grid-row: 2/3; */
+    width: 490px;
+    height: 48px;
+    clip-path: polygon(0 33%, 96% 33%, 96% 48%, 96% 70%, 0 70%);
+    background: rgb(255, 0, 0);
+    z-index: 100;
+}
+.enemy__bars-life-pre{
+    width: 490px;
+    height: 48px;
+    clip-path: polygon(0 33%, 96% 33%, 96% 48%, 96% 70%, 0 70%);
+    background: rgb(255, 255, 255);
+    z-index: 80;
+    transition: width 0.5s;
+}
+.enemy__viegos{
+    grid-column: 2/3;
+    z-index: 150;
+    height: 430px;
+}
+.enemy__viego{
+    width: 490px;
+    height: 430px;
+    z-index: 100;
+}
+.store{
+    width: 22%;
+    border-left: 5px solid rgb(71, 18, 18);
+    display: grid;
+    grid-template-rows: 110px 507px;
+}
+.head__store{
+    display: flex;
+    background-image: url("../img/head.jpeg");
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.store__items{
+    background-image: url("../img/store.jpg");
+    background-size: cover;
+    width: 100%;
+    overflow-y: auto;
+}
+.store__item{
+    background-image: url("../img/cartel.png");
+    background-size: cover;
+    margin: 5px;
+    margin-top: 0;
+    box-shadow: 0 0 5px 3px rgb(34, 34, 34);
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+.store__item:hover{
+    box-shadow: 0 0 5px 3px rgb(156, 156, 156);
+}
+.bg__item{
+    background-color: #404c4c61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.5s, background-color 0.5s;
+}
+.bg__item:hover{
+    background-color: transparent;
+    opacity: 1;
+}
+.price{
+    height: 15%;
+    text-align: center;
+    padding: 11px 15px;
+}
