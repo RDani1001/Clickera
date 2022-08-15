@@ -113,12 +113,12 @@ $(function () {
                         `)
                         let cartel = el.parentNode.parentNode
                         cartel.parentNode.removeChild(cartel)
-                        setTimeout(function (){
-                            head_enemy.html("<p>Click on the enemy to damage him</p>")
-                        },2000)
                     }else{
-                        console.log("No tienes el dinero suficiente")
+                        head_enemy.html(`<p>You don't have enough money</p>`)
                     }
+                    setTimeout(function (){
+                        head_enemy.html("<p>Click on the enemy to damage him</p>")
+                    },2000)
                 }
             }
         })
