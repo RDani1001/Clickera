@@ -10,17 +10,6 @@ $(function () {
     const store = $(".store__items");
     const bg = $(".bg");
     const head_enemy = $(".head__enemy");
-    stats.html(`
-        <p class="stats">Stats</p>
-        <br>
-        <p class="p-stats">Damage: 1hp per click</p>
-        <br>
-        <br>
-        <p class="p-stats">Total of clics: 0 clicks</p>
-        <br>
-        <br>
-        <p class="p-stats">Weapon: Wooden sword</p>
-    `);
     const items = [
         {
             name: "Stone sword",
@@ -71,25 +60,10 @@ $(function () {
             damage: 508 
         },
     ]
-    console.log(items);
+    cstats();
     var id;
     var pcfor = [items[0].price.toString(),items[1].price.toString()]
-    for (let t = 2; t < items.length; t++) {
-        let newprice = items[t].price.toLocaleString('en-US')
-        pcfor.push(newprice)
-    }
-    let fragment = document.createDocumentFragment();
-    for (let i = 0; i < items.length; i++){
-        let item = document.createElement('div')
-        item.setAttribute("class","store__item");
-        item.innerHTML= `
-            <div class="bg__item">
-                <p class="price" id="${i}">${items[i].name}: $${pcfor[i]}</p>
-            </div>
-        `;
-        fragment.append(item)
-    }
-    store.append(fragment);
+    creitems();
     document.querySelectorAll(".price").forEach(el => {
         el.addEventListener("click", e =>{
             id = e.target.getAttribute("id")
@@ -124,22 +98,9 @@ $(function () {
         })
     });
     head_enemy.html("<p>Click on the enemy to damage him</p>")
-    viego.click(function dano() {
-        bg.animate({
-            opacity: '0.5'
-        },80,function(){
-            bg.animate({
-                opacity: '1'
-            },80) 
-        })
-        vida.css("width", `-=${damage*0.3}px`)
-        var life = vida.css("width")
-        console.log(life)
-        previda.css("width", life)
-        coins += (1*damage)
-        console.log(coins)
-        carcoin.html("Coins: " + coins)
-        clics += 1
+    viego.click(dano());
+
+    function cstats(){
         if(id==null||id==undefined||id==NaN){
             stats.html(`
             <p class="stats">Stats</p>
@@ -165,5 +126,41 @@ $(function () {
             <p class="p-stats">Weapon: ${items[id].name}</p>
         `)
         }
-    });
+    }
+    function creitems() { 
+        for (let t = 2; t < items.length; t++) {
+            let newprice = items[t].price.toLocaleString('en-US')
+            pcfor.push(newprice)
+        }
+        let fragment = document.createDocumentFragment();
+        for (let i = 0; i < items.length; i++){
+            let item = document.createElement('div')
+            item.setAttribute("class","store__item");
+            item.innerHTML= `
+                <div class="bg__item">
+                    <p class="price" id="${i}">${items[i].name}: $${pcfor[i]}</p>
+                </div>
+            `;
+            fragment.append(item)
+        }
+        store.append(fragment);
+    }
+    function dano() {
+        bg.animate({
+            opacity: '0.5'
+        },80,function(){
+            bg.animate({
+                opacity: '1'
+            },80) 
+        })
+        vida.css("width", `-=${damage*0.3}px`)
+        var life = vida.css("width")
+        console.log(life)
+        previda.css("width", life)
+        coins += (1*damage)
+        console.log(coins)
+        carcoin.html("Coins: " + coins)
+        clics += 1
+        cstats();
+    }
 });
