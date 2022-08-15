@@ -3,7 +3,7 @@ body{
     margin: 0;
 }
 .container{
-    display: flex; 
+    display: flex;
     height: 100%;
 }
 .coins{
@@ -19,7 +19,6 @@ body{
     width: 100%;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
 .head__coins-tit{
     color: aliceblue;
@@ -179,4 +178,422 @@ body{
     height: 15%;
     text-align: center;
     padding: 11px 15px;
+}
+@media (max-width:1100px) {
+    .coins{
+        grid-template-rows: 110px 537px;
+    }
+    .coins__stats{
+        height: 518px;
+    }
+    .head__enemy{
+        font-size: 33px;
+    }
+    .store{
+        grid-template-rows: 110px 537px;
+    }
+}
+@media (max-width:950px) {
+    .coins{
+        grid-template-rows: 110px 537px;
+    }
+    .coins__stats{
+        height: 520px;
+    }
+    .enemy{
+        grid-template-rows: 50px 380px;
+        grid-template-columns: 50px max-content;
+    }
+    .head__enemy{
+       font-size: 30px;
+    }
+    .enemy__hearth{
+        width: 40px;
+        height: 40px;
+    }
+    .enemy__bars-bg{
+        width: 430px;
+        height: 40px;
+    }
+    .enemy__bars-life{
+        width: 430px;
+        height: 38px;
+    }
+    .enemy__bars-life-pre{
+        width: 430px;
+        height: 38px;
+    }
+    .bg-white{
+        width: 90%;
+        padding-left: 30px;
+        padding-right: 23px;
+    }
+    .bg{
+        width: 90%;
+        margin-right: 5px;
+        margin-left: -30px;
+        padding-left: 54px;
+        padding-right: 50px;
+        padding-bottom: 48px;
+    }
+    .enemy__viegos{
+        grid-column: 2/3;
+        z-index: 150;
+        height: 400px;
+    }
+    .enemy__viego{
+        width: 450px;
+        height: 400px;
+        z-index: 100;
+    }
+    .store{
+        grid-template-rows: 110px 537px;
+    }
+}
+@media (max-width:800px) {
+    .coins{
+        grid-template-rows: 110px 565px;
+    }
+    .coins__stats{
+        height: 543px;
+    }
+    .head__enemy{
+       font-size: 20px;
+    }
+    .enemy__hearth{
+        width: 30px;
+        height: 30px;
+    }
+    .enemy__bars-bg{
+        width: 400px;
+        height: 30px;
+    }
+    .enemy__bars-life{
+        width: 400px;
+        height: 28px;
+    }
+    .enemy__bars-life-pre{
+        width: 420px;
+        height: 28px;
+    }
+    .bg-white{
+        width: 90%;
+        padding-left: 20px;
+        padding-right: 23px;
+    }
+    .bg{
+        width: 90%;
+        margin-right: 5px;
+        margin-left: -20px;
+        padding-left: 50px;
+        padding-right: 35px;
+        padding-bottom: 116px;
+    }
+    .enemy__viegos{
+        z-index: 150;
+        height: 310px;
+        width: 310px;
+    }
+    .enemy__viego{
+        width: 350px;
+        height: 310px;
+        z-index: 100;
+    }
+    .store{
+        grid-template-rows: 110px 565px;
+    }
+}
+@media (max-width:700px) {
+    .coins__stats .p-stats{
+        font-size: 20px;
+    }
+    .price{
+        font-size: 15px;
+    }
+}
+@media (max-width:600px) {
+    .head__enemy{
+       font-size: 19px;
+    }
+    .enemy{
+        grid-template-rows: 30px 380px;
+        grid-template-columns: 30px max-content;
+    }
+    .enemy__hearth{
+        width: 30px;
+        height: 30px;
+    }
+    .enemy__bars-bg{
+        width: 310px;
+        height: 30px;
+    }
+    .enemy__bars-life{
+        width: 310px;
+        height: 28px;
+    }
+    .enemy__bars-life-pre{
+        width: 310px;
+        height: 28px;
+    }
+    .enemy__viego{
+        height: 260px;
+        width: 290px;
+    }
+    .enemy__viegos{
+        width: 290px;
+    }
+    .bg-white{
+        width: 90%;
+        padding-left: 13px;
+        padding-right: 9px;
+    }
+    .bg{
+        width: 90%;
+        margin-right: 5px;
+        margin-left: -20px;
+        padding-left: 40px;
+        padding-right: 25px;
+        padding-bottom: 135px;
+    }
+}
+@media (max-width:425px) {
+    .container{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .coins{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        border: none;
+    }
+    .head__coins{
+        width: 100%;
+        height: 80px;
+    }
+    .coins__stats{
+        height: 610px;
+    }
+    .head__coins-tit{
+        font-size: 40px;
+    }
+    .head__coins-stats{
+        width: 100%;
+        height: 100px;
+        overflow-y: scroll;
+    }
+    .head__coins-stats .stats{
+        font-size: 40px;
+    }
+    .head__coins-stats .p-stats{
+        font-size: 35px;
+    }
+    .enemys{
+        width: 100%;
+    }
+    .head__enemy{
+        font-size: 23px;
+    }
+    .bg-white{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .bg{
+        width: 100%;
+        height: 350px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .enemy{
+        width: max-content;
+        margin: 0;
+        grid-template-rows: 40px 250px;
+        grid-template-columns: 40px 250px;
+    }
+    .enemy__hearth{
+        width: 40px;
+        height: 40px;
+    }
+    .enemy__bars-bg{
+        width: 260px;
+        height: 40px;
+    }
+    .enemy__bars-life{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__bars-life-pre{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__viego{
+        height: 220px;
+        width: 240px;
+    }
+    .store{
+        width: 100%;
+        border: none;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .head__store{
+        height: 100px;
+    }
+    .store__items{
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .store__item{
+        width: 80%;
+    }
+}
+@media (max-width:375px){
+    .head__coins{
+        height: 80px;
+        width: 100%;
+    }
+    .coins__stats{
+        height: 610px;
+        width: 100%;
+    }
+    .head__coins-tit{
+        font-size: 40px;
+    }
+    .head__coins-stats{
+        height: 100px;
+        width: 100%;
+    }
+    .head__coins-stats .stats{
+        font-size: 40px;
+    }
+    .head__coins-stats .p-stats{
+        font-size: 35px;
+    }
+    .head__enemy{
+        font-size: 23px;
+        width: 100%;
+    }
+    .bg{
+        height: 350px;
+        width: 100%;
+    }
+    .enemy{
+        grid-template-rows: 40px 250px;
+        grid-template-columns: 40px 250px;
+    }
+    .enemy__hearth{
+        width: 40px;
+        height: 40px;
+    }
+    .enemy__bars-bg{
+        width: 260px;
+        height: 40px;
+    }
+    .enemy__bars-life{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__bars-life-pre{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__viego{
+        height: 220px;
+        width: 240px;
+    }
+    .store{
+        width: 100%;
+        height: 300px;
+    }
+    .head__store{
+        width: 100%;
+        height: 100px;
+    }
+    .store__items{
+        width: 100%;
+        height: 200px;
+    }
+    .store__item{
+        width: 80%;
+    }
+}
+@media (max-width:320px){
+    .container{
+        width: 100%;
+    }
+    .head__coins{
+        width: 100%;
+        height: 80px;
+    }
+    .coins__stats{
+        width: 100%;
+        height: 610px;
+    }
+    .head__coins-tit{
+        font-size: 40px;
+    }
+    .head__coins-stats{
+        width: 100%;
+        height: 100px;
+    }
+    .head__coins-stats .stats{
+        font-size: 40px;
+    }
+    .head__coins-stats .p-stats{
+        font-size: 35px;
+    }
+    .head__enemy{
+        width: 100%;
+        font-size: 23px;
+    }
+    .bg{
+        width: 100%;
+        height: 350px;
+    }
+    .enemy{
+        grid-template-rows: 40px 250px;
+        grid-template-columns: 40px 250px;
+    }
+    .enemy__hearth{
+        width: 40px;
+        height: 40px;
+    }
+    .enemy__bars-bg{
+        width: 260px;
+        height: 40px;
+    }
+    .enemy__bars-life{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__bars-life-pre{
+        width: 260px;
+        height: 38px;
+    }
+    .enemy__viego{
+        height: 220px;
+        width: 240px;
+    }
+    .store{
+        width: 100%;
+        height: 300px;
+    }
+    .head__store{
+        width: 100%;
+        height: 100px;
+    }
+    .store__items{
+        width: 100%;
+        height: 200px;
+    }
+    .store__item{
+        width: 80%;
+    }
 }
