@@ -72,6 +72,7 @@ $(function () {
         },
     ]
     console.log(items);
+    var id;
     var pcfor = [items[0].price.toString(),items[1].price.toString()]
     for (let t = 2; t < items.length; t++) {
         let newprice = items[t].price.toLocaleString('en-US')
@@ -91,7 +92,7 @@ $(function () {
     store.append(fragment);
     document.querySelectorAll(".price").forEach(el => {
         el.addEventListener("click", e =>{
-            const id = e.target.getAttribute("id")
+            id = e.target.getAttribute("id")
             for (let i = 0; i < items.length; i++) {
                 if (id == items[i].id) {
                     if (coins >= items[i].price) {
