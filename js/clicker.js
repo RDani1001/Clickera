@@ -98,7 +98,24 @@ $(function () {
         })
     });
     head_enemy.html("<p>Click on the enemy to damage him</p>")
-    viego.click(dano());
+    viego.click(function dano() {
+        bg.animate({
+            opacity: '0.5'
+        },80,function(){
+            bg.animate({
+                opacity: '1'
+            },80) 
+        })
+        vida.css("width", `-=${damage*0.3}px`)
+        var life = vida.css("width")
+        console.log(life)
+        previda.css("width", life)
+        coins += (1*damage)
+        console.log(coins)
+        carcoin.html("Coins: " + coins)
+        clics += 1
+        cstats();
+    });
 
     function cstats(){
         if(id==null||id==undefined||id==NaN){
@@ -144,23 +161,5 @@ $(function () {
             fragment.append(item)
         }
         store.append(fragment);
-    }
-    function dano() {
-        bg.animate({
-            opacity: '0.5'
-        },80,function(){
-            bg.animate({
-                opacity: '1'
-            },80) 
-        })
-        vida.css("width", `-=${damage*0.3}px`)
-        var life = vida.css("width")
-        console.log(life)
-        previda.css("width", life)
-        coins += (1*damage)
-        console.log(coins)
-        carcoin.html("Coins: " + coins)
-        clics += 1
-        cstats();
     }
 });
